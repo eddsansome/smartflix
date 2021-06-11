@@ -1,9 +1,7 @@
 class MoviesController < ApplicationController
 
   def show
-
     title = params[:title].humanize.titleize
-
     @movie = Movie.find_by(title: title)
 
     if @movie
