@@ -14,7 +14,7 @@ module Services
 
       begin
       Movie.new(
-        title: movie[:title],
+        title: movie[:title].titleize,
         year: movie[:year].to_i,
         rated: movie[:rated],
         released: movie[:released],
