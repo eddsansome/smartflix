@@ -6,6 +6,7 @@ Dotenv.load
 module Services
   class GetMovie
     include Services::Parsers::Movie
+    attr_reader :base_uri
 
     def initialize
       @base_uri = "http://www.omdbapi.com/?apikey=#{ENV['OMDB_API_KEY']}&"
