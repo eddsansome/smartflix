@@ -21,6 +21,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'faker'
   gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
