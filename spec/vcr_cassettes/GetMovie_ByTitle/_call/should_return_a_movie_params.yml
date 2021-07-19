@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.omdbapi.com/?apikey=4a3f518e&t=titanic
+    uri: "http://www.omdbapi.com/?apikey=<\U0001F595\U0001F4A9\U0001F595>&t=titanic"
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 19 Jul 2021 15:34:45 GMT
+      - Mon, 19 Jul 2021 16:12:02 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -43,11 +43,11 @@ http_interactions:
       Cf-Cache-Status:
       - HIT
       Age:
-      - '1460'
+      - '3697'
       Server:
       - cloudflare
       Cf-Ray:
-      - 671504083d5cf41f-LHR
+      - 67153aa5be31ce2f-LHR
     body:
       encoding: ASCII-8BIT
       string: '{"Title":"Titanic","Year":"1997","Rated":"PG-13","Released":"19 Dec
@@ -60,5 +60,5 @@ http_interactions:
         Movie Database","Value":"7.8/10"},{"Source":"Rotten Tomatoes","Value":"89%"},{"Source":"Metacritic","Value":"75/100"}],"Metascore":"75","imdbRating":"7.8","imdbVotes":"1,074,046","imdbID":"tt0120338","Type":"movie","DVD":"01
         Jun 2014","BoxOffice":"$659,363,944","Production":"20th Century Fox, Lightstorm
         Entertainment, Paramount Pictures","Website":"N/A","Response":"True"}'
-  recorded_at: Mon, 19 Jul 2021 15:34:45 GMT
+  recorded_at: Mon, 19 Jul 2021 16:12:02 GMT
 recorded_with: VCR 6.0.0
