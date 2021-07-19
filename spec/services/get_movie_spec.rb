@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../../services/get_movie'
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/vcr_cassettes"
@@ -9,9 +8,9 @@ VCR.configure do |config|
 end
 
 # add vcr here!
-RSpec.describe Services::GetMovie, :vcr do
-  describe '#by_title' do
-    let(:movie) { subject.by_title('titanic') } 
+RSpec.describe GetMovie::ByTitle, :vcr do
+  describe '#call' do
+    let(:movie) { subject.call('titanic') } 
 
     it 'should return a movie' do
 
@@ -24,20 +23,9 @@ RSpec.describe Services::GetMovie, :vcr do
     end
   end
 
-  describe '#by_id', :vcr do
-    let(:movie) { subject.by_id('tt3896198') } 
-    it 'should return a movie' do
-      expect(movie.title).to eq('Guardians Of The Galaxy Vol. 2')
-      expect(movie.year).to eq(2017)
-      expect(movie.actors.size).to eq(3)
-      expect(movie.released).to eq('05 May 2017')
-    end
-  end
-
   describe "shit data", :vcr do
     it "should be handled gracefully" do
-      expect { subject.by_id "t3896198" }.to raise_error(Services::Parsers::Movie::MovieParseError)
-      expect { subject.by_title "This_AInt_a_FUCking_m0vie" }.to raise_error(Services::Parsers::Movie::MovieParseError)
+      expect { subject.call "This_AInt_a_FUCking_m0vie" }.to raise_error(Parsers::Movie::MovieParseError)
     end
   end
 end

@@ -1,4 +1,3 @@
-module Services
   module Parsers
     module Movie
 
@@ -32,7 +31,7 @@ module Services
         imdbrating: movie[:imdbrating].to_f,
         imdbvotes: movie[:imdbvotes],
         imdbid: movie[:imdbid],
-        type: movie[:type],
+        movie_type: movie[:type],
         dvd: movie[:dvd],
         boxoffice: movie[:boxoffice],
         production: movie[:production],
@@ -44,5 +43,4 @@ module Services
     end
     end
   end
-end
 
