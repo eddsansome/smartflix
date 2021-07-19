@@ -10,37 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_19_151818) do
-
+ActiveRecord::Schema.define(version: 20_210_719_151_818) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "movies", force: :cascade do |t|
-    t.string "title"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "year"
-    t.string "rated"
-    t.string "released"
-    t.string "runtime"
-    t.string "genre"
-    t.string "director"
-    t.string "writer"
-    t.string "actors"
-    t.string "plot"
-    t.string "language"
-    t.string "country"
-    t.string "awards"
-    t.string "poster"
-    t.float "metascore"
-    t.float "imdbrating"
-    t.string "imdbvotes"
-    t.string "imdbid"
-    t.string "dvd"
-    t.string "boxoffice"
-    t.string "production"
-    t.string "website"
-    t.string "movie_type"
+  create_table 'movies', force: :cascade do |t|
+    t.string 'title'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.integer 'year'
+    t.string 'rated'
+    t.string 'released'
+    t.string 'runtime'
+    t.string 'genre'
+    t.string 'director'
+    t.string 'writer'
+    t.string 'actors'
+    t.string 'plot'
+    t.string 'language'
+    t.string 'country'
+    t.string 'awards'
+    t.string 'poster'
+    t.float 'metascore'
+    t.float 'imdbrating'
+    t.string 'imdbvotes'
+    t.string 'imdbid'
+    t.string 'dvd'
+    t.string 'boxoffice'
+    t.string 'production'
+    t.string 'website'
+    t.string 'movie_type'
   end
-
 end
