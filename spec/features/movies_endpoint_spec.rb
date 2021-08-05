@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 require 'sidekiq/testing'
 
@@ -14,7 +16,7 @@ RSpec.describe 'Movie Page', :vcr, type: :feature do
   end
 
   context 'when movie is not in the DB' do
-    context 'and the movie exists on OMDB' do
+    context 'when the movie exists on OMDB' do
       let(:title) { 'rambo' }
 
       before do
@@ -29,7 +31,7 @@ RSpec.describe 'Movie Page', :vcr, type: :feature do
       end
     end
 
-    context 'and the movie does not exist on OMDB' do
+    context 'when the movie does not exist on OMDB' do
       let(:title) { 'TheRevengeofGrzegorzUnijewski' }
 
       it 'User navigates to /movies/title' do
