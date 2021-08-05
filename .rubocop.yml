@@ -1,20 +1,29 @@
-inherit_from: .rubocop_todo.yml
-
-require: rubocop-rails
-require: rubocop-rspec
+require:
+  - rubocop-rails
+  - rubocop-rspec
 
 Metrics/BlockLength:
   Enabled: true
   Exclude: 
     - spec/**/*
 
-Metrics/LineLength:
-  Max: 120
+Layout:
+  Metrics/LineLength:
+    Max: 120
 
-MethodLength:
-  Max: 20
-  Exclude:
-    - db/migrate/*
+  MethodLength:
+    Max: 20
+    Exclude:
+      - db/migrate/*
 
-BlockLength:
-  Max: 40
+  BlockLength:
+    Max: 40
+
+RSpec/ContextWording:
+ Prefixes:
+   - when
+   - with
+   - without
+   - if
+   - unless
+   - for

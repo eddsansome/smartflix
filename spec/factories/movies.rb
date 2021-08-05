@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :movie do
-    title { "Titanic" }
+    title { 'Titanic' }
   end
 end

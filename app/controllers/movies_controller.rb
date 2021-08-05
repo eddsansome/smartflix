@@ -8,7 +8,7 @@ class MoviesController < ApplicationController
     else
       CreateMovieWorker.perform_async(title)
       render json: { error: 'Sorry, not found - but we are adding more movies everyday!' }.to_json,
-             status: 404
+             status: :not_found
     end
   end
 end

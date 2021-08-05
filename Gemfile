@@ -16,17 +16,17 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
+  gem 'capybara'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 5.0.0'
-  gem 'vcr'
-  gem 'webmock'
-  gem 'factory_bot_rails'
-  gem 'capybara'
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
@@ -37,4 +37,3 @@ group :development do
 end
 
 gem 'simplecov', require: false, group: :test
-
