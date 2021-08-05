@@ -24,6 +24,9 @@ group :development, :test do
   gem 'webmock'
   gem 'factory_bot_rails'
   gem 'capybara'
+  gem 'rubocop'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
 end
 
 group :development do
