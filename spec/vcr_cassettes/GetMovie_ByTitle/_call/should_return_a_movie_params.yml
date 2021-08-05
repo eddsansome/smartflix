@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 19 Jul 2021 16:12:02 GMT
+      - Thu, 05 Aug 2021 09:50:47 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -29,9 +29,9 @@ http_interactions:
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Mon, 19 Jul 2021 16:10:25 GMT
+      - Thu, 05 Aug 2021 10:49:45 GMT
       Last-Modified:
-      - Mon, 19 Jul 2021 15:10:25 GMT
+      - Thu, 05 Aug 2021 09:49:45 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -43,22 +43,22 @@ http_interactions:
       Cf-Cache-Status:
       - HIT
       Age:
-      - '3697'
+      - '62'
       Server:
       - cloudflare
       Cf-Ray:
-      - 67153aa5be31ce2f-LHR
+      - 679f1f8bacc63607-MAN
     body:
       encoding: ASCII-8BIT
       string: '{"Title":"Titanic","Year":"1997","Rated":"PG-13","Released":"19 Dec
         1997","Runtime":"194 min","Genre":"Drama, Romance","Director":"James Cameron","Writer":"James
-        Cameron","Actors":"Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates","Plot":"A
+        Cameron","Actors":"Leonardo DiCaprio, Kate Winslet, Billy Zane","Plot":"A
         seventeen-year-old aristocrat falls in love with a kind but poor artist aboard
         the luxurious, ill-fated R.M.S. Titanic.","Language":"English, Swedish, Italian,
-        French","Country":"USA, Mexico, Australia, Canada","Awards":"Won 11 Oscars.
-        Another 115 wins & 83 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg","Ratings":[{"Source":"Internet
-        Movie Database","Value":"7.8/10"},{"Source":"Rotten Tomatoes","Value":"89%"},{"Source":"Metacritic","Value":"75/100"}],"Metascore":"75","imdbRating":"7.8","imdbVotes":"1,074,046","imdbID":"tt0120338","Type":"movie","DVD":"01
+        French","Country":"United States, Mexico, Australia","Awards":"Won 11 Oscars.
+        125 wins & 83 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.8/10"},{"Source":"Rotten Tomatoes","Value":"89%"},{"Source":"Metacritic","Value":"75/100"}],"Metascore":"75","imdbRating":"7.8","imdbVotes":"1,079,408","imdbID":"tt0120338","Type":"movie","DVD":"01
         Jun 2014","BoxOffice":"$659,363,944","Production":"20th Century Fox, Lightstorm
         Entertainment, Paramount Pictures","Website":"N/A","Response":"True"}'
-  recorded_at: Mon, 19 Jul 2021 16:12:02 GMT
+  recorded_at: Thu, 05 Aug 2021 09:50:45 GMT
 recorded_with: VCR 6.0.0
