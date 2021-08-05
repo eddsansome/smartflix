@@ -16,12 +16,12 @@ RSpec.describe 'Movie Page', :vcr, type: :feature do
   end
 
   context 'when movie is not in the DB' do
-    context 'when the movie exists on OMDB' do
-      let(:title) { 'rambo' }
-
       before do
         Sidekiq::Testing.inline!
       end
+
+    context 'when the movie exists on OMDB' do
+      let(:title) { 'rambo' }
 
       it 'User navigates to /movies/title' do
         visit "/movies/#{title}"
