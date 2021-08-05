@@ -12,7 +12,16 @@ module GetMovie
     end
 
     def call
-      parse(HTTParty.get("#{BASE_URI}t=#{@title}"))
+      http_object = HTTParty.get("#{BASE_URI}t=#{@title}")
+      if http_object["Response"] == "False"
+        log_error(http_object["Error"])
+        return
+      end
+      parse(http_object)
+    end
+
+    def log_error(error)
+      Rails.logger.warn "#{@title}: #{error}"
     end
   end
 end
