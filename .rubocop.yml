@@ -1,3 +1,19 @@
 inherit_from: .rubocop_todo.yml
 
 require: rubocop-rails
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude: 
+    - spec/**/*
+
+Metrics/LineLength:
+  Max: 120
+
+MethodLength:
+  Max: 20
+  Exclude:
+    - db/migrate/*
+
+BlockLength:
+  Max: 40
