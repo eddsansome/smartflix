@@ -30,3 +30,6 @@ group :development do
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
 end
+
+gem 'simplecov', require: false, group: :test
+
