@@ -7,6 +7,8 @@ class CreateMovieWorker
 
     movie_params = GetMovie::ByTitle.call(title)
 
+    return if movie_params.nil?
+
     Movie.create!(movie_params)
   end
 end

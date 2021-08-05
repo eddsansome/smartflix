@@ -22,6 +22,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
   gem 'vcr'
   gem 'webmock'
+  gem 'factory_bot_rails'
+  gem 'capybara'
 end
 
 group :development do
