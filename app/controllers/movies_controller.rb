@@ -2,6 +2,7 @@
 
 class MoviesController < ApplicationController
   def show
+    # making an edit
     title = params[:title].humanize.titleize
     @movie = Movie.find_by(title: title)
 
