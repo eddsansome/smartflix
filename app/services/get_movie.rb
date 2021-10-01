@@ -15,14 +15,10 @@ module GetMovie
 
     def call
       http_object = HTTParty.get("#{BASE_URI}t=#{@title}")
-      puts "*" * 100
-      puts http_object
       if http_object['Response'] == 'False'
         log_error(http_object['Error'])
         return
       end
-      puts "*" * 100
-      puts http_object
       parse(http_object)
     end
 
