@@ -9,7 +9,14 @@ class CreateMovieWorker
 
     movie_params = GetMovie::ByTitle.call(title)
 
+    puts "*" * 1000
+
+
+
+    puts "movie params = #{movie_params.to_s}"
+
     return if movie_params.nil?
+
 
     Movie.create!(movie_params)
   end
