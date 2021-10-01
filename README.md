@@ -1,24 +1,27 @@
-# README
+## Smartflix
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+installation
 
-Things you may want to cover:
+- clone repo
 
-* Ruby version
+`git clone git@github.com:eddsansome/smartflix.git`
 
-* System dependencies
+- move into repo
 
-* Configuration
+`cd smartflix` 
 
-* Database creation
+- create .env file and add the `OMDB_API_KEY`
 
-* Database initialization
+`echo OMDB_API_KEY=api-key >> .env`
 
-* How to run the test suite
+- create docker installation
 
-* Services (job queues, cache servers, search engines, etc.)
+`docker-compose run --no-deps web rails new . --force --database=postgresql`
 
-* Deployment instructions
+N.B we use latest minor version of ruby 2.7 within the docker setup (currently 2.7.4)
 
-* ...
+- start up the docker services
+
+`docker-compose up`
+
+- enjoy smartflix!
