@@ -25,3 +25,7 @@ N.B we use latest minor version of ruby 2.7 within the docker setup (currently 2
 `docker-compose up`
 
 - enjoy smartflix!
+
+TODOS:
+  - getting movies with ambigious names is a bit flaky, so need to tighten this up (some movies with spaces are ok, some aren't)
+  - cron jobs for tidying up the DB
