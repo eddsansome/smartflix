@@ -10,6 +10,10 @@ installation
 
 `cd smartflix` 
 
+- install dependencies
+
+`bundle install`
+
 - create .env file and add the `OMDB_API_KEY`
 
 `echo OMDB_API_KEY=api-key >> .env`
