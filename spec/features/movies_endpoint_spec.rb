@@ -6,15 +6,6 @@ require 'sidekiq/testing'
 RSpec.describe 'Movie Page', :vcr, type: :feature do
   include ActiveJob::TestHelper
 
-  context 'when movie is in the DB' do
-    let(:movie) { create(:movie) }
-
-    it 'User navigates to /movies/title' do
-      visit "/movies/#{movie.title}"
-      expect(page).to have_text('Titanic')
-    end
-  end
-
   context 'when movie is not in the DB' do
       before do
         Sidekiq::Testing.inline!

@@ -34,6 +34,13 @@ installation
 
 - enjoy smartflix!
 
+p.s
+
+- specs can be ran by using `docker-compose run web bundle exec rspec`, however we you may need to clean out the VCR cassettes if they throw errors
+`cd spec/vcr_cassettes && rm -Ri *`
+then confirm the deletion (don't delete yo hard drive by mistake ^^)
+
+
 TODOS:
   - ~~getting movies with ambigious names is a bit flaky, so need to tighten this up (some movies with spaces are ok, some aren't)~~
   - ~~seems to save the movie in the db, but cannot retrieve~~
