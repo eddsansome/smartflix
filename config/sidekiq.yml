@@ -6,6 +6,6 @@
 
 :schedule:
   clean_up_movies:
-    cron: '0 0 1 * *'
+    cron: '0 7 * * *'
     class: CleanUpMovieWorker
 
