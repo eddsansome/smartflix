@@ -8,4 +8,7 @@
   clean_up_movies:
     cron: '0 7 * * *'
     class: CleanUpMovieWorker
+  batch_update_movies:
+    cron: '0 8 * * *'
+    class: BatchUpdateMoviesWorker
 
