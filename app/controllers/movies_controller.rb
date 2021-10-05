@@ -3,13 +3,13 @@
 class MoviesController < ApplicationController
   def show
     # making an edit
-    title = params[:title].humanize.titleize
-    @movie = Movie.find_by(title: title)
+    title_slug = Slug::FromParams.call(params)
+    @movie = Movie.where(slug: title_slug).first
 
     if @movie
       render json: @movie
     else
-      CreateMovieWorker.perform_async(title)
+      CreateMovieWorker.perform_async(params[:title])
       render json: { error: 'Sorry, not found - but we are adding more movies everyday!' }.to_json,
              status: :not_found
     end

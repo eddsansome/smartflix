@@ -9,8 +9,9 @@ class CreateMovieWorker
 
     movie_params = GetMovie::ByTitle.call(title)
 
-    return if movie_params.nil?
 
-    Movie.create!(movie_params)
+    return if movie_params.nil?
+    slug = Slug::FromParams.call(movie_params)
+    Movie.create!(movie_params.merge(slug: slug))
   end
 end
