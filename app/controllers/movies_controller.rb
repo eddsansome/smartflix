@@ -6,6 +6,7 @@ class MoviesController < ApplicationController
 
     render json: movies
   end
+
   def show
     title_slug = Slug::FromParams.call(params)
     @movie = Movie.where(slug: title_slug).first

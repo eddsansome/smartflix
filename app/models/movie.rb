@@ -2,5 +2,5 @@
 
 class Movie < ApplicationRecord
   validates :title, uniqueness: true
-  scope :not_fresh, -> { where(created_at: Time.zone.now - 2.day) }
+  scope :not_fresh, -> { where(created_at: Time.zone.now - 2.days) }
 end

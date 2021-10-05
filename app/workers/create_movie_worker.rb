@@ -6,12 +6,6 @@ class CreateMovieWorker
 
   def perform(title)
     sleep 1
-
-    movie_params = GetMovie::ByTitle.call(title)
-
-    return if movie_params.nil?
-
-    slug = Slug::FromParams.call(movie_params)
-    Movie.create!(movie_params.merge(slug: slug))
+    CreateMovie::Action.call(title)
   end
 end
