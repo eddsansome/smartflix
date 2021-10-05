@@ -7,9 +7,9 @@ RSpec.describe 'Movie Page', :vcr, type: :feature do
   include ActiveJob::TestHelper
 
   context 'when movie is not in the DB' do
-      before do
-        Sidekiq::Testing.inline!
-      end
+    before do
+      Sidekiq::Testing.inline!
+    end
 
     context 'when the movie exists on OMDB' do
       let(:title) { 'rambo' }
