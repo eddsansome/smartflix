@@ -44,8 +44,8 @@ then confirm the deletion (don't delete yo hard drive by mistake ^^)
 TODOS:
   - ~~getting movies with ambigious names is a bit flaky, so need to tighten this up (some movies with spaces are ok, some aren't)~~
   - ~~seems to save the movie in the db, but cannot retrieve~~
-  - added a `slug` column to handle dodgy input
-  - cron jobs for tidying up the DB
+  - ~~add a `slug` column to handle dodgy input~~
+  - ~~cron jobs for tidying up the DB~~
   
   - im sure a lot of the code could be refactored to make it not as shit / tidier... WIP 😅
 
