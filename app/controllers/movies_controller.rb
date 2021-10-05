@@ -8,15 +8,20 @@ class MoviesController < ApplicationController
   end
 
   def show
-    title_slug = Slug::FromParams.call(params)
-    @movie = Movie.where(slug: title_slug).first
+    movie = Movie.find_by_slug(slug).first
 
-    if @movie
-      render json: @movie
+    if movie
+      render json: movie
     else
       CreateMovieWorker.perform_async(params[:title])
       render json: { error: 'Sorry, not found - but we are adding more movies everyday!' }.to_json,
              status: :not_found
     end
+  end
+
+  private
+  # this could be in a better place
+  def slug
+    Slug::FromParams.call(params)
   end
 end

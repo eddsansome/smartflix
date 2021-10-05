@@ -3,4 +3,5 @@
 class Movie < ApplicationRecord
   validates :title, uniqueness: true
   scope :not_fresh, -> { where(created_at: Time.zone.now - 2.days) }
+  scope :find_by_slug, ->(slug) { where(slug: slug) }
 end
