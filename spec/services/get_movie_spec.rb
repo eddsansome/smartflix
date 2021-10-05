@@ -20,7 +20,7 @@ RSpec.describe GetMovie::ByTitle, :vcr do
 
       it 'logs an error to the console' do
         travel_to Time.utc(2021, 1, 1, 1, 1)
-        expect(Rails.logger).to receive('warn').with('[2021-01-01 01:01:00 +0000] WARNING: I HATE VCR WITH A FIERY PASSION: Movie not found!')
+        expect(Rails.logger).to receive('warn').with('[2021-01-01 01:01:00 UTC] WARNING: I HATE VCR WITH A FIERY PASSION: Movie not found!')
         subject
       end
     end

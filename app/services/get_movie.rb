@@ -23,7 +23,7 @@ module GetMovie
     end
 
     def log_error(error)
-      Rails.logger.warn "[#{Time.now}] WARNING: #{@title}: #{error}"
+      Rails.logger.warn "[#{Time.now.utc}] WARNING: #{@title}: #{error}"
     end
   end
 end
