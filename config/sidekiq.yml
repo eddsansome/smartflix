@@ -4,3 +4,8 @@
   - default
   - movies
 
+:schedule:
+  clean_up_movies:
+    cron: '0 0 1 * *'
+    class: CleanUpMovieWorker
+
