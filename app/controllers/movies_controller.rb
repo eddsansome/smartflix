@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
 class MoviesController < ApplicationController
+  def index
+    movies = Movie.all
+
+    render json: movies
+  end
   def show
-    # making an edit
     title_slug = Slug::FromParams.call(params)
     @movie = Movie.where(slug: title_slug).first
 
