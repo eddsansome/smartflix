@@ -18,13 +18,13 @@ installation
 
 `echo OMDB_API_KEY=api-key >> .env`
 
-- create docker installation
+- create docker installation (this might not be needed if the --build tag is added on the next command)
 
 `docker-compose run --no-deps web rails new . --force --database=postgresql`
 
 - start up the docker services
 
-`docker-compose up`
+`docker-compose up --build`
 
 - open another terminal window (probs CTRL+t) and enter the following commands
 
