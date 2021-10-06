@@ -36,7 +36,7 @@ installation
 
 p.s
 
-- specs can be ran by using `docker-compose run web bundle exec rspec`, however we you may need to clean out the VCR cassettes if they throw errors
+- specs can be ran by using `docker-compose run web bundle exec rspec`, however you may need to clean out the VCR cassettes if they throw errors
 `cd spec/vcr_cassettes && rm -Ri *`
 then confirm the deletion (don't delete yo hard drive by mistake ^^)
 
