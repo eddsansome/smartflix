@@ -1,6 +1,6 @@
-## Smartflix
+# Smartflix
 
-Installation
+## Installation
 
 ### clone repo
 
