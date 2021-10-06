@@ -20,8 +20,9 @@ class MoviesController < ApplicationController
   end
 
   private
+
   # this could be in a better place
   def slug
-    Slug::FromParams.call(params)
+    Utils::Slug::FromParams.call(params)
   end
 end

@@ -48,7 +48,8 @@ TODOS:
   - ~~cron jobs for tidying up the DB~~
   
   - im sure a lot of the code could be refactored to make it not as shit / tidier... WIP 😅
-  - data normalization (Actor, Genre, Writer, Director etc)
+  - data normalization (Actor, Genre, Writer, ~~Director~~ etc)
+  - add specs
 
 
 Docker help:

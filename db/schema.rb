@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_04_203843) do
+ActiveRecord::Schema.define(version: 2021_10_06_144111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "directors", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+  end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
@@ -24,7 +30,6 @@ ActiveRecord::Schema.define(version: 2021_10_04_203843) do
     t.string "released"
     t.string "runtime"
     t.string "genre"
-    t.string "director"
     t.string "writer"
     t.string "actors"
     t.string "plot"
@@ -42,6 +47,8 @@ ActiveRecord::Schema.define(version: 2021_10_04_203843) do
     t.string "website"
     t.string "movie_type"
     t.string "slug"
+    t.bigint "director_id"
+    t.index ["director_id"], name: "index_movies_on_director_id"
   end
 
 end

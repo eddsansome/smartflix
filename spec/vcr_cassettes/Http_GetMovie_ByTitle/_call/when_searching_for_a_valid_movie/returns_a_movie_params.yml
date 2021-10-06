@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "http://www.omdbapi.com/?apikey=<\U0001F595\U0001F4A9\U0001F595>&t=titanic"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Oct 2021 14:25:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 05 Oct 2021 09:13:11 GMT
+      Last-Modified:
+      - Tue, 05 Oct 2021 08:13:11 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '108731'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 699f8f064f284072-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Titanic","Year":"1997","Rated":"PG-13","Released":"19 Dec
+        1997","Runtime":"194 min","Genre":"Drama, Romance","Director":"James Cameron","Writer":"James
+        Cameron","Actors":"Leonardo DiCaprio, Kate Winslet, Billy Zane","Plot":"A
+        seventeen-year-old aristocrat falls in love with a kind but poor artist aboard
+        the luxurious, ill-fated R.M.S. Titanic.","Language":"English, Swedish, Italian,
+        French","Country":"United States, Mexico, Australia","Awards":"Won 11 Oscars.
+        125 wins & 83 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.8/10"},{"Source":"Rotten Tomatoes","Value":"89%"},{"Source":"Metacritic","Value":"75/100"}],"Metascore":"75","imdbRating":"7.8","imdbVotes":"1,092,075","imdbID":"tt0120338","Type":"movie","DVD":"08
+        Jan 2002","BoxOffice":"$659,363,944","Production":"20th Century Fox, Lightstorm
+        Entertainment, Paramount Pictures","Website":"N/A","Response":"True"}'
+  recorded_at: Wed, 06 Oct 2021 14:25:22 GMT
+recorded_with: VCR 6.0.0
