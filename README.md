@@ -48,7 +48,7 @@ docker-compose run web rake db:migrate
 
 ### enjoy smartflix!
 
-p.s
+## SPECS
 
 specs can be ran by using 
 ```
@@ -62,7 +62,7 @@ cd spec/vcr_cassettes && rm -Ri *
 then confirm the deletion (don't delete yo hard drive by mistake ^^)
 
 
-TODOS:
+## TODOS
   - ~~getting movies with ambigious names is a bit flaky, so need to tighten this up (some movies with spaces are ok, some aren't)~~
   - ~~seems to save the movie in the db, but cannot retrieve~~
   - ~~add a `slug` column to handle dodgy input~~
