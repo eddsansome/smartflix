@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "http://www.omdbapi.com/?apikey=<\U0001F595\U0001F4A9\U0001F595>&t=I%20HATE%20VCR%20WITH%20A%20FIERY%20PASSION"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Oct 2021 14:25:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '47'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 05 Oct 2021 09:20:47 GMT
+      Last-Modified:
+      - Tue, 05 Oct 2021 08:20:47 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '108275'
+      Accept-Ranges:
+      - bytes
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 699f8f074bf12c9d-LHR
+    body:
+      encoding: UTF-8
+      string: '{"Response":"False","Error":"Movie not found!"}'
+  recorded_at: Fri, 01 Jan 2021 01:01:00 GMT
+recorded_with: VCR 6.0.0

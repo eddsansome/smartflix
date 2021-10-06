@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe GetMovie::ByTitle, :vcr do
+RSpec.describe Http::GetMovie::ByTitle, :vcr do
   describe '#call' do
     subject { described_class.call(title) }
 

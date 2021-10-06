@@ -6,6 +6,6 @@ class CreateMovieWorker
 
   def perform(title)
     sleep 1
-    CreateMovie::Action.call(title)
+    Movies::CreateMovie::Action.call(title)
   end
 end

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Slug::FromParams do
+RSpec.describe Utils::Slug::FromParams do
   describe '#call' do
     subject { described_class.call(params) }
 
