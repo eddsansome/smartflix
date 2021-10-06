@@ -15,7 +15,7 @@ module Movies
         # TODO: tidy this up, we need to remove the director as this will cause 
         # an ActiveRecord::AssociationTypeMismatch
         # but there is probably a nicer way of handling this (perhaps checking if the director
-        # needs to be updated
+        # needs to be updated)
 
         params.except! :director
 
