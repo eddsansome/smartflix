@@ -1,43 +1,64 @@
 ## Smartflix
 
-installation
+Installation
 
-- clone repo
+### clone repo
 
-`git clone git@github.com:eddsansome/smartflix.git`
+```
+git clone git@github.com:eddsansome/smartflix.git
+```
 
-- move into repo
+### move into repo
 
-`cd smartflix` 
+```
+cd smartflix
+```
 
-- install dependencies
+### install dependencies
 
-`bundle install`
+```
+bundle install
+```
 
-- create .env file and add the `OMDB_API_KEY`
+### create .env file and add the `OMDB_API_KEY`
 
-`echo OMDB_API_KEY=api-key >> .env`
+```
+echo OMDB_API_KEY=api-key >> .env
+```
 
-- create docker installation (this might not be needed if the --build tag is added on the next command)
+### create docker installation (this might not be needed if the --build tag is added in step 6)
 
-`docker-compose run --no-deps web rails new . --force --database=postgresql`
+```
+docker-compose run --no-deps web rails new . --force --database=postgresql
+```
 
-- start up the docker services
+### start up the docker services
 
-`docker-compose up --build`
+```
+docker-compose up --build
+```
 
-- open another terminal window (probs CTRL+t) and enter the following commands
+### open another terminal window (probs CTRL+t) and enter the following commands
 
-`docker-compose run web rake db:create`
-*then*
-`docker-compose run web rake db:migrate`
+```
+docker-compose run web rake db:create
+# then #
+docker-compose run web rake db:migrate
+```
 
-- enjoy smartflix!
+### enjoy smartflix!
 
 p.s
 
-- specs can be ran by using `docker-compose run web bundle exec rspec`, however you may need to clean out the VCR cassettes if they throw errors
-`cd spec/vcr_cassettes && rm -Ri *`
+specs can be ran by using 
+```
+docker-compose run web bundle exec rspec`,
+```
+
+however you may need to clean out the VCR cassettes if they throw errors
+```
+cd spec/vcr_cassettes && rm -Ri *
+```
 then confirm the deletion (don't delete yo hard drive by mistake ^^)
 
 
@@ -48,7 +69,11 @@ TODOS:
   - ~~cron jobs for tidying up the DB~~
   
   - im sure a lot of the code could be refactored to make it not as shit / tidier... WIP 😅
-  - data normalization (Actor, Genre, Writer, ~~Director~~ etc)
+  - data normalization
+     - Actor❌  
+     - Genre ❌
+     - Writer❌ 
+     - Director✅
   - add specs
 
 
