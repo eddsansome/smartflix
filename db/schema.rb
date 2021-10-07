@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_07_080811) do
+ActiveRecord::Schema.define(version: 2021_10_07_090213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 2021_10_07_080811) do
     t.index ["movie_id"], name: "index_movie_actors_on_movie_id"
   end
 
+  create_table "movie_writers", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "movie_id"
+    t.bigint "writer_id"
+    t.index ["movie_id"], name: "index_movie_writers_on_movie_id"
+    t.index ["writer_id"], name: "index_movie_writers_on_writer_id"
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
@@ -45,7 +54,6 @@ ActiveRecord::Schema.define(version: 2021_10_07_080811) do
     t.string "released"
     t.string "runtime"
     t.string "genre"
-    t.string "writer"
     t.string "plot"
     t.string "language"
     t.string "country"
@@ -63,6 +71,12 @@ ActiveRecord::Schema.define(version: 2021_10_07_080811) do
     t.string "slug"
     t.bigint "director_id"
     t.index ["director_id"], name: "index_movies_on_director_id"
+  end
+
+  create_table "writers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

@@ -16,9 +16,12 @@ module Movies
         ActiveRecord::Base.transaction do
           director = create_director(params[:director])
           actors = create_actors(params[:actors])
+          writers = create_writers(params[:writer])
           params.except! :actors
+          params.except! :writer
           movie = model.create!(params.merge(slug: slug, director: director))
           add_associations_to_movie(actors, movie, MovieActor) 
+          add_associations_to_movie(writers, movie, MovieWriter) 
         end
       end
 
@@ -41,7 +44,14 @@ module Movies
       def create_actors(names)
         raise InvalidParams if names.nil?
 
+        # make this generic, no need for seperate units
         Actors::BatchCreateActors::Action.call(names)
+      end
+      def create_writers(names)
+        raise InvalidParams if names.nil?
+
+        # make this generic, no need for seperate units
+        Writers::BatchCreateWriters::Action.call(names)
       end
 
       def add_associations_to_movie(entities, movie, join)
