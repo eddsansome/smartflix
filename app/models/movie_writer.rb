@@ -1,4 +1,4 @@
 class MovieWriter < ApplicationRecord
-    belongs_to :movie
-    belongs_to :writer
+  belongs_to :movie
+  belongs_to :writer
 end

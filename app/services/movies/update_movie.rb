@@ -12,7 +12,7 @@ module Movies
       def call
         return if params.nil?
 
-        # TODO: tidy this up, we need to remove the director as this will cause 
+        # TODO: tidy this up, we need to remove the director as this will cause
         # an ActiveRecord::AssociationTypeMismatch
         # but there is probably a nicer way of handling this (perhaps checking if the director
         # needs to be updated)
