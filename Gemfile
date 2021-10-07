@@ -16,7 +16,6 @@ gem 'sass-rails', '>= 6'
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
 gem 'turbolinks', '~> 5'
-gem 'webpacker', '~> 5.0'
 
 group :development, :test do
   gem 'capybara'

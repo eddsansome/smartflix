@@ -1,0 +1,67 @@
+<main class="main-section">
+<div class="movie-header">
+<h1><%= @movie.title %></h1>
+<div class="movie-plot">
+<p><%= @movie.plot %></p>
+</div>
+<img src="<%= @movie.poster %>"/>
+</div>
+<h2>Movie Info</h2>
+<div class="movie-info">
+
+<div class="movie-info-card">
+<p>Released: </p>
+<p><%= @movie.year %></p>
+</div>
+
+<div class="movie-info-card">
+<p>Rated: </p>
+<p><%= @movie.rated %></p>
+</div>
+
+<div class="movie-info-card">
+<p>Year: </p>
+<p><%= @movie.released %></p>
+</div>
+
+<div class="movie-info-card">
+<p>Length:</p>
+<p><%= @movie.runtime %></p>
+</div>
+
+<div class="movie-info-card">
+<p>Genres:</p>
+<p><%= @movie.genre %></p>
+</div>
+
+<div class="movie-info-card">
+<p>Language:</p>
+<p><%= @movie.language%></p>
+</div>
+
+<div class="movie-info-card">
+<p>Country: </p>
+<p><%= @movie.country %></p>
+</div>
+
+<div class="movie-info-card">
+<p>Awards: </p>
+<p><%= @movie.awards %></p>
+</div>
+<div class="movie-info-card">
+<p>Metascore: </p>
+<p><%= @movie.metascore %></p>
+</div>
+<div class="movie-info-card">
+<p>Imdb Rating: </p>
+<p><%= @movie.imdbrating %></p>
+</div>
+<div class="movie-info-card">
+<p>Imdb Votes: </p>
+<p><%= @movie.imdbvotes %></p>
+</div>
+
+</div>
+
+
+</main>

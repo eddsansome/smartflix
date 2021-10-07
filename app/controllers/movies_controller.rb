@@ -8,10 +8,10 @@ class MoviesController < ApplicationController
   end
 
   def show
-    movie = Movie.find_by_slug(slug).first
+    @movie = Movie.find_by_slug(slug).first
 
-    if movie
-      render json: movie
+    if @movie
+      render :show
     else
       CreateMovieWorker.perform_async(params[:title])
       render json: { error: 'Sorry, not found - but we are adding more movies everyday!' }.to_json,
