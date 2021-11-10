@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
     # we should change this to paginate
     @movies = Movie.all
 
-    render json: movies
+    render json: @movies
   end
 
   def show
