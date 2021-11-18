@@ -1,2 +1,16 @@
-<h1>hello world</h1>
-<h1>movie title = <%= @movie.title %></h1>
+<h1><%= @movie.title %></h1>
+
+<h1>Actors</h1>
+<% @movie.actors.each do |actor| %>
+  <%= link_to(actor.name, actor_path(actor)) %>
+<% end %>
+<br>
+
+<% if @movie.director %>
+<h1>Director</h1>
+<%= link_to(@movie.director.name, director_path(@movie.director)) %>
+<% end %>
+<h1>Writers</h1>
+<% @movie.writers.each do |writer| %>
+  <%= link_to(writer.name, writer_path(writer)) %>
+<% end %>

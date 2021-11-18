@@ -3,9 +3,9 @@
 class MoviesController < ApplicationController
   def index
     # we should change this to paginate
-    @movies = Movie.all
+    @movies = Movie.order(:title).page params[:page]
 
-    render json: @movies
+    render :index
   end
 
   def show
