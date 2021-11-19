@@ -1,6 +1,8 @@
 /.bundle
 .env
 
+.idea
+
 coverage
 
 /log/*
