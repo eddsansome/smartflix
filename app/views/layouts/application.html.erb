@@ -28,7 +28,13 @@
   <body>
   <%= render "layouts/navbar" %>
 
+
   <div class="container">
+    <% flash.each do |type, msg| %>
+      <div class="alert alert-danger" role="alert">
+        <%= msg %>
+      </div>
+    <% end %>
     <%= yield %>
   </div>
   </body>
@@ -40,7 +46,4 @@
       </p>
     </div>
   </footer>
-
-
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 </html>
