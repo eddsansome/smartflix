@@ -2,20 +2,21 @@
 
 class MoviesController < ApplicationController
   def index
-    movies = Movie.all
+    # we should change this to paginate
+    @movies = Movie.order(:title).page params[:page]
 
-    render json: movies
+    render :index
   end
 
   def show
-    movie = Movie.find_by_slug(slug).first
+    @movie = Movie.find_by(slug: slug)
 
-    if movie
-      render json: movie
+    if @movie
+      render :show
     else
-      CreateMovieWorker.perform_async(params[:title])
-      render json: { error: 'Sorry, not found - but we are adding more movies everyday!' }.to_json,
-             status: :not_found
+      @title = params[:title]
+      CreateMovieWorker.perform_async(@title)
+      render :movie_not_found
     end
   end
 
