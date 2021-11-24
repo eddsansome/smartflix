@@ -7,7 +7,7 @@ ruby '2.7.2'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'dotenv-rails', groups: %i[development test]
-gem 'haml'
+gem "haml-rails", "~> 2.0"
 gem 'httparty'
 gem 'kaminari'
 gem 'jbuilder', '~> 2.7'
