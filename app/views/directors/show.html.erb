@@ -1,4 +1,0 @@
-<h1><%= @director.name %></h1>
-<% @director.movies.each do |movie| %>
-  <%= link_to(movie.title, movie_path(movie.title)) %>
-<% end %>

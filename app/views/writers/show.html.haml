@@ -1,0 +1,3 @@
+%h1= @writer.name
+- @writer.movies.each do |movie|
+  = link_to(movie.title, movie_path(movie.title))
