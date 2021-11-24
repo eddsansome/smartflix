@@ -1,4 +1,0 @@
-<h1><%= @writer.name %></h1>
-<% @writer.movies.each do |movie| %>
-  <%= link_to(movie.title, movie_path(movie.title)) %>
-<% end %>
