@@ -1,0 +1,43 @@
+:css
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+%main
+  .container.py-4
+    .col-md-12
+      .p-5.mb-4.bg-light.rounded-3
+        .container-fluid.py-5.col-md-4
+          %h1.display-5.fw-bold= @movie.title
+          %img{:src => "#{@movie.poster}"}/
+        .container.py-4.text-center
+          %p.lead= @movie.plot
+        .container.py-4.text-center
+          %p.lead
+            Director: #{link_to @movie.director.name, director_path(@movie.director)}
+    .row.align-items-md-stretch
+      .container.py-12
+        .col-md-12
+          .h-100.p-5.bg-light.border.rounded-3.mb-6
+            %h2 The Deets
+      .col-md-6
+        .h-100.p-5.text-white.bg-dark.rounded-3
+          %h2 Actors
+          %ul.list-group
+            - @movie.actors.each do |actor|
+              %li.list-group-item.text-white.bg-dark= link_to actor.name, actor_path(actor), class: "link-light"
+      .col-md-6
+        .h-100.p-5.bg-light.border.rounded-3
+          %h2 Writers
+          %ul.list-group
+            - @movie.writers.each do |writer|
+              %li.list-group-item= link_to writer.name, writer_path(writer)
