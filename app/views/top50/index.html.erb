@@ -1,0 +1,5 @@
+<ul class="list-group">
+<% @movies.each_with_index do |movie, index| %>
+<li class="list-group-item"><%= index + 1 %>. <%= link_to(movie.title, movie_path(movie.title)) %> | <%= movie.average_rating %></li>
+<% end %>
+</ul>

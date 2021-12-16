@@ -19,12 +19,15 @@ module Movies
           director = create_director(params[:director])
           actors = create_actors(params[:actors])
           writers = create_writers(params[:writer])
+          ratings = params[:ratings]
 
-          remove_keys_from_params([:actors, :writer])
+          remove_keys_from_params([:actors, :writer, :ratings])
 
           movie = model.create!(params.merge(slug: slug, director: director))
           add_associations_to_movie(actors, movie, MovieActor)
           add_associations_to_movie(writers, movie, MovieWriter)
+          create_ratings(ratings, movie)
+
         end
       end
 
@@ -38,6 +41,10 @@ module Movies
 
       def slug
         Utils::Slug::FromParams.call(params)
+      end
+
+      def create_ratings(ratings, movie)
+        Ratings::CreateRating::Action.call(ratings, movie)
       end
 
       def create_director(names)
