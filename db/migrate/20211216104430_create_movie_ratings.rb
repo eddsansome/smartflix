@@ -1,6 +1,5 @@
 class CreateMovieRatings < ActiveRecord::Migration[6.1]
   def change
-
     # lets move the ratings to their own table
     remove_column :movies, :imdbrating
 

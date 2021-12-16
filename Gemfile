@@ -7,10 +7,10 @@ ruby '2.7.2'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'dotenv-rails', groups: %i[development test]
-gem "haml-rails", "~> 2.0"
+gem 'haml-rails', '~> 2.0'
 gem 'httparty'
-gem 'kaminari'
 gem 'jbuilder', '~> 2.7'
+gem 'kaminari'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'

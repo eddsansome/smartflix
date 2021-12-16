@@ -5,7 +5,7 @@ class BatchUpdateMoviesWorker
   sidekiq_options retry: false, queue: 'movies'
 
   def perform
-    # TODO we should batch this
+    # TODO: we should batch this
     movies = Movie.all
 
     movies.each do |movie|

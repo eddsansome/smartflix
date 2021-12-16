@@ -21,13 +21,12 @@ module Movies
           writers = create_writers(params[:writer])
           ratings = params[:ratings]
 
-          remove_keys_from_params([:actors, :writer, :ratings])
+          remove_keys_from_params(%i[actors writer ratings])
 
           movie = model.create!(params.merge(slug: slug, director: director))
           add_associations_to_movie(actors, movie, MovieActor)
           add_associations_to_movie(writers, movie, MovieWriter)
           create_ratings(ratings, movie)
-
         end
       end
 
@@ -36,7 +35,7 @@ module Movies
       attr_reader :params, :title, :model
 
       def remove_keys_from_params(args)
-        params.except! *args
+        params.except!(*args)
       end
 
       def slug
