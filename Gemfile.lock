@@ -269,6 +269,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    scenic (1.5.5)
+      activerecord (>= 4.0.0)
+      railties (>= 4.0.0)
     semantic_range (3.0.0)
     sexp_processor (4.16.0)
     sidekiq (6.2.2)
@@ -354,6 +357,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   sass-rails (>= 6)
+  scenic
   sidekiq
   sidekiq-scheduler
   simplecov

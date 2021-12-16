@@ -6,7 +6,6 @@ module Parsers
 
     def parse(http_object)
       http_object = Parsers::Ratings.call(http_object)
-      binding.pry
       http_object.transform_keys { |k| k.downcase.to_sym }.except!(*EXLUDED_KEYS)
     end
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_104430) do
+ActiveRecord::Schema.define(version: 2021_12_16_130301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2021_12_16_104430) do
     t.float "tomato_rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "average_rating"
     t.index ["movie_id"], name: "index_movie_ratings_on_movie_id"
   end
 
@@ -90,4 +91,16 @@ ActiveRecord::Schema.define(version: 2021_12_16_104430) do
   end
 
   add_foreign_key "movie_ratings", "movies"
+
+  create_view "top_movies", sql_definition: <<-SQL
+      SELECT movies.id,
+      movies.title,
+      movies.released,
+      movies.poster,
+      movie_ratings.average_rating
+     FROM (movies
+       JOIN movie_ratings ON ((movies.id = movie_ratings.movie_id)))
+    ORDER BY movie_ratings.average_rating DESC
+   LIMIT 50;
+  SQL
 end

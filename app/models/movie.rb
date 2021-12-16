@@ -2,7 +2,7 @@
 
 class Movie < ApplicationRecord
   belongs_to :director
-  has_one :movie_rating
+  has_many :movie_ratings
   has_many :movie_actors
   has_many :movie_writers
   has_many :actors, through: :movie_actors
