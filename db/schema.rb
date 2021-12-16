@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_25_141331) do
+ActiveRecord::Schema.define(version: 2021_12_16_104430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,16 @@ ActiveRecord::Schema.define(version: 2021_11_25_141331) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["actor_id"], name: "index_movie_actors_on_actor_id"
     t.index ["movie_id"], name: "index_movie_actors_on_movie_id"
+  end
+
+  create_table "movie_ratings", force: :cascade do |t|
+    t.bigint "movie_id", null: false
+    t.float "imdb_rating"
+    t.float "meta_rating"
+    t.float "tomato_rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_movie_ratings_on_movie_id"
   end
 
   create_table "movie_writers", force: :cascade do |t|
@@ -60,7 +70,6 @@ ActiveRecord::Schema.define(version: 2021_11_25_141331) do
     t.string "awards"
     t.string "poster"
     t.float "metascore"
-    t.float "imdbrating"
     t.string "imdbvotes"
     t.string "imdbid"
     t.string "dvd"
@@ -80,4 +89,5 @@ ActiveRecord::Schema.define(version: 2021_11_25_141331) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "movie_ratings", "movies"
 end
