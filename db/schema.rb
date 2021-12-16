@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_130301) do
+ActiveRecord::Schema.define(version: 2021_12_16_143615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 2021_12_16_130301) do
 
   add_foreign_key "movie_ratings", "movies"
 
-  create_view "top_movies", sql_definition: <<-SQL
+  create_view "top_movies", materialized: true, sql_definition: <<-SQL
       SELECT movies.id,
       movies.title,
       movies.released,

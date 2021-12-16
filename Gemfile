@@ -22,6 +22,7 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
+  gem 'bullet'
   gem 'capybara'
   gem 'factory_bot_rails'
   gem 'faker'

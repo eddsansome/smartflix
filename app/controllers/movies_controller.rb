@@ -3,7 +3,7 @@
 class MoviesController < ApplicationController
   def index
     # we should change this to paginate
-    @movies = Movie.order(:title).page params[:page]
+    @movies = Movie.order(:title).page(params[:page]).includes(:movie_ratings)
 
     render :index
   end
