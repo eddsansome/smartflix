@@ -27,6 +27,9 @@ module Movies
           add_associations_to_movie(actors, movie, MovieActor)
           add_associations_to_movie(writers, movie, MovieWriter)
           create_ratings(ratings, movie)
+
+          # lets refresh the top movies when we add one :D
+          TopMovie.refresh
         end
       end
 
